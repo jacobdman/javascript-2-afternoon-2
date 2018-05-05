@@ -229,20 +229,20 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
   
 function addTen (numbers) {
   
-//   var addedTen = [i];
-//   for (i=0; i<numbers.length; i++){
-//     addedTen[i] = Integer.parseInt(numbers[i]) + 10;
-//   }
-//   return addedTen;
-// }
-
-  var addedTen = numbers.map(function (i) {
-    return i+10;
-  })
-return addedTen
+  var addedTen = [i];
+  for (i=0; i<numbers.length; i++){
+    addedTen[i] = parseInt(numbers[i]) + 10;
+  }
+  return addedTen;
 }
 
-//console.log(addTen(numbers))
+//   var addedTen = numbers.map(function (i) {
+//     return i+10;
+//   })
+// return addedTen
+//}
+
+console.log(addTen(numbers))
 
 ////////// PROBLEM 11 //////////
 
@@ -284,8 +284,12 @@ function longer (arr1,arr2) {
 function both (arr1,arr2) {
   var both = [];
   for (i=0; i<arr1.length; i++) {
-    if (arr1[i])
+    if (arr2.indexOf(arr1[i])!== -1) {
+      both.push(arr1[i]);
+    }
   }
+  return both;
+}
 
 // console.log(arr1,arr2)
 // console.log(both(arr1,arr2))
